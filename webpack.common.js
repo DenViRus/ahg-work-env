@@ -6,7 +6,7 @@ module.exports = {
   target: "web",
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    publicPath: "",
   },
   module: {
     rules: [
@@ -31,14 +31,6 @@ module.exports = {
       },
       {
         test: /\.(svg|jpg|jpeg|png|gif)$/,
-        // use: [
-        //   {
-        //     loader: "url-loader",
-        //     options: {
-        //       limit: 8192,
-        //     },
-        //   },
-        // ],
         type: "asset/resource",
       },
     ],
